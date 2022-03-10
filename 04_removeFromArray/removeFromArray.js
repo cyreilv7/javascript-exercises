@@ -1,10 +1,8 @@
 const removeFromArray = function(arr, ...args) {
-    let arrLength = arr.length;
     let set = [];
-    for (let i = 0; i < arrLength; i++) {
-        if (args.includes(arr[i])) continue;
-        set.push(arr[i]);
-    }
+    arr.forEach(item => {
+        if (!args.includes(item)) set.push(item);
+    });
     return set;
 };
 
